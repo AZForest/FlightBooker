@@ -1,0 +1,36 @@
+.FlightOptions {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+.passengers {
+    grid-row: 1;
+    grid-column: 1 / 2 ;
+    width: 140px;
+}
+.bags {
+    grid-row: 1;
+    grid-column: 2 / 3;
+    width: 140px;
+}
+.carryOn {
+    grid-row: 1;
+    grid-column: 3 / 4;
+    width: 140px;
+}
+.class {
+    grid-row: 1;
+    grid-column: 4 / 5;
+    width: 140px;
+}
+.price-option {
+    grid-row: 1;
+    grid-column: 5 / 6;
+    width: 140px;
+    color: #17a2b8;
+    font-size: 20px;
+}

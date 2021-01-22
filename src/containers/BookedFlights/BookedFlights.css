@@ -1,0 +1,65 @@
+.BookedFlights {
+    width: 920px;
+    height: 350px;
+    background-color: #d9d9d9;
+    margin: 40px auto;
+    position: relative;
+    overflow: scroll;
+}
+.bookedflights-list {
+    width: 91%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 60px;
+    
+}
+.bookedflights-list ul {
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.bookedflights-list ul li:first-of-type {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+.bookedflights-list ul li:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+.bookedflights-list ul li:nth-of-type(3) {
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+.bookedflights-list ul li:nth-of-type(4) {
+    grid-column: 4 / 5;
+    grid-row: 1;
+}
+.bookedflights-list ul li:nth-of-type(5) {
+    grid-column: 5 / 6;
+    grid-row: 1;
+}
+.bookedflights-list ul li:nth-of-type(6) {
+    grid-column: 6 / 7;
+    grid-row: 1;
+}
+.bookedflights-list ul li:nth-of-type(7) {
+    grid-column: 7 / 8;
+    grid-row: 1;
+}
+.bookedflights-list ul li:nth-of-type(8) {
+    grid-column: 8 / 9;
+    grid-row: 1;
+}
+
+@media (max-width: 500px) {
+    .BookedFlights {
+        width: 300px;
+        overflow: scroll;
+    }
+}

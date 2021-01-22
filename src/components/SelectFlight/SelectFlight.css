@@ -1,0 +1,232 @@
+.SelectFlightContainer {
+    width: 840px;
+    height: 350px;
+    background-color: #f2f2f2;
+    position: relative;
+    margin: 20px auto;
+}
+.SelectedFlight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 100%;
+    background: lightslategrey;
+}
+.passenger-label {
+    width: 140px;
+    grid-row: 1;
+    grid-column: 1 / 2;
+}
+.bag-label {
+    grid-row: 1;
+    grid-column: 2 / 3;
+    width: 140px;
+}
+.carry-label {
+    grid-row: 1;
+    grid-column: 3 / 4;
+    width: 140px;
+}
+.class-label {
+    grid-row: 1;
+    grid-column: 4 / 5;
+    width: 140px;
+}
+.price-label {
+    grid-row: 1;
+    grid-column: 5 / 6;
+    width: 140px;
+}
+.controls2 {
+    grid-row: 2;
+    grid-column: 1 / 6;
+}
+.controls3 {
+    grid-row: 3;
+    grid-column: 1 / 6;
+    background-color: peru;
+}
+.btns-container {
+    margin: 0 0px 0 0px;
+}
+.btns-container button {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #aea79f;
+    color: white;
+    width: 25px;
+    margin: 2.5px;
+}
+.btns-container button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #df382c;
+}
+.btns-container1 {
+    grid-row: 3;
+    grid-column: 1 / 2;
+    width: 140px;
+}
+.btns-container2 {
+    grid-row: 3;
+    grid-column: 2 / 3;
+    width: 140px;
+}
+.btns-container3 {
+    grid-row: 3;
+    grid-column: 3 / 4;
+    width: 140px;
+}
+.btns-container4 {
+    grid-row: 3;
+    grid-column: 4 / 5;
+    width: 140px;
+}
+/* .controls .btns-container:first-of-type {
+    margin: 0 0 0 20px;
+} */
+.Bookbtn {
+    margin: auto;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #17a2b8;
+    font-weight: bold;
+    font-size: 26px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.Bookbtn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.X {
+    background-color: transparent;
+    font-size: 16px;
+    width: 5%;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 !important;
+    padding: 15px 0;
+}
+.X:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.selFlight {
+    width: 100%;
+    height: 20px;
+    background-color: #e95420;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    padding: 15px 0;
+}
+.selFlight div {
+    margin: 0px 20px 0 20px;
+}
+.selFlight .img1 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: move-plane;
+    animation-duration: 0.5s;
+}
+@keyframes move-plane {
+    from {transform: translate(-1000%, -50%)}
+    to {transform: translate(-50%, -50%)}
+}
+
+
+
+.please-select-flight {
+    color: black;
+    text-align: center;
+    margin: 90px auto;
+    padding: 0;
+    position: relative;
+    font-size: 16px;
+}
+/* .options-price {
+    font-size: 14px;
+    grid-row: 4;
+    grid-column: 1 / 10;
+    background-color: powderblue;
+    display: flex;
+
+} */
+.additional-passengers {
+    grid-row: 4;
+    grid-column: 1 / 2;
+    width: 140px;
+    font-size: 12px;
+    margin-top: 0px;
+}
+.additional-bags {
+    grid-row: 4;
+    grid-column: 2 / 3;
+    width: 140px;
+    font-size: 12px;
+    margin-top: 0px;
+}
+.additional-carry {
+    grid-row: 4;
+    grid-column: 3 / 4;
+    width: 140px;
+    font-size: 12px;
+    margin-top: 0px;
+}
+.class-prices {
+    grid-row: 4;
+    grid-column: 4 / 5;
+    width: 140px;
+    font-size: 12px;
+    margin-top: 0px;
+}
+.class-prices p {
+    margin: 0;
+    padding: 0;
+}
+.controls-container {
+    height: 200px;
+    z-index: 100;
+    width: 90%;
+    margin: 20px auto 10px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 25px 10px;
+}
+.fade {
+    opacity: 1;
+    animation: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@media (max-width: 500px) {
+    .SelectFlightContainer {
+        width: 300px;
+        overflow: scroll;
+    }
+    .fade {
+        width: 300px;
+        overflow: scroll;
+    }
+    .selFlight {
+        width: 820px;
+    }
+}
