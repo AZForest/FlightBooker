@@ -9,7 +9,7 @@ import refreshIcon from '../../assets/white-refresh.jpg';
 class AvailableFlights extends React.Component {
 
     componentDidMount() {
-        axios.get('https://peaceful-hollows-15789.herokuapp.com/availableFlights')
+        axios.get('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/availableFlights')
         .then(response => {
             this.props.onInitFlights(response);
         })
@@ -19,7 +19,7 @@ class AvailableFlights extends React.Component {
     }
 
     refreshFlights() {
-        axios.get('https://peaceful-hollows-15789.herokuapp.com/refreshFlights')
+        axios.get('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/refreshFlights')
         .then(response => {
             this.props.onInitFlights(response);
             this.props.onRemoveFlight();

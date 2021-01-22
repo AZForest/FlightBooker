@@ -48,7 +48,7 @@ class SelectFlight extends React.Component {
             id: Math.random() 
         };
 
-        axios.post('https://peaceful-hollows-15789.herokuapp.com/BookedFlights', flightData)
+        axios.post('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/BookedFlights', flightData)
         .then(response => {
             console.log(response);
         })
@@ -56,7 +56,7 @@ class SelectFlight extends React.Component {
             console.log(err);
         });
         this.props.onBookFlight();
-        axios.get('https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
+        axios.get('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
         .then(response => {
             this.props.onInitBookedFlights(response);
         })
