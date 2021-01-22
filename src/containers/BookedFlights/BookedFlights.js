@@ -13,7 +13,7 @@ class BookedFlights extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/BookedFlights')
+        axios.get('https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
         .then(response => {
             this.props.onInitBookedFlights(response);
             console.log(response);
@@ -24,7 +24,7 @@ class BookedFlights extends React.Component {
     }
     componentDidUpdate() {
         console.log("update");
-        axios.get('/BookedFlights')
+        axios.get('https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
         .then(response => {
             console.log(response.data.length, this.props.bFlights.length);
             if (this.props.bFlights.length !== response.data.length) {
