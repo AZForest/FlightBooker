@@ -13,7 +13,7 @@ class BookedFlights extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
+        axios.get('https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
         .then(response => {
             this.props.onInitBookedFlights(response);
             console.log(response);
@@ -24,7 +24,7 @@ class BookedFlights extends React.Component {
     }
     componentDidUpdate() {
         console.log("update");
-        axios.get('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
+        axios.get('https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
         .then(response => {
             console.log(response.data.length, this.props.bFlights.length);
             if (this.props.bFlights.length !== response.data.length) {
@@ -40,14 +40,14 @@ class BookedFlights extends React.Component {
 
     deleteFlight() {
 
-        axios.delete('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/BookedFlights', { data: { id: this.state.removeId }})
+        axios.delete('https://peaceful-hollows-15789.herokuapp.com/BookedFlights', { data: { id: this.state.removeId }})
         .then(response => {
             console.log(response);
         })
         .catch(err => {
             console.log(err);
         })
-        axios.get('https://cors-anywhere.herokuapp.com/https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
+        axios.get('https://peaceful-hollows-15789.herokuapp.com/BookedFlights')
         .then(response => {
             this.props.onInitBookedFlights(response);
             console.log(response);
