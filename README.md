@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# FlightBooker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React App that allows an user to select from a list of auto-generated flights stored on an express server. Users are then able to modify the flight settings and save the result with a total price. Users then can delete the flight. 
 
-## Available Scripts
+## Links
 
-In the project directory, you can run:
+* [Live Demo](azforest.github.io/FlightBooker)
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Available Flights:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Browse and select available flights, refresh flights to get new list.
 
-### `npm test`
+<img width="1440" alt="StartingScreen" src="https://user-images.githubusercontent.com/61096655/132398880-45e3d3e6-3f4c-477e-a744-d3501cc73179.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Flight Options:
 
-### `npm run build`
+Modify flight settings, including number of passengers, bags, carry-ons, and class type. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="1437" alt="ModifyFlight" src="https://user-images.githubusercontent.com/61096655/132399156-4333f9ec-1cda-4092-9791-3f28eb7535db.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Booked Flights:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+View list of booked flights. Clicking on a flight prompts the user if they want to delete.
 
-### `npm run eject`
+<img width="1440" alt="BookedFlights" src="https://user-images.githubusercontent.com/61096655/132400049-fd18dfbf-d1c2-4f2c-ab0a-384c458041e5.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technology
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* React, with create-react-app
+* Redux
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### API Interface
 
-## Learn More
+* Built to interface with FlightBooker Server: [FLightBooker-Server](github.com/AZForest/FlightBookerServer)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
