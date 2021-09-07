@@ -4,7 +4,7 @@ React App that allows an user to select from a list of auto-generated flights st
 
 ## Links
 
-* [Live Demo](azforest.github.io/FlightBooker)
+* [Live Demo](https://azforest.github.io/FlightBooker)
 
 ## Screenshots
 
@@ -35,5 +35,5 @@ View list of booked flights. Clicking on a flight prompts the user if they want 
 
 ### API Interface
 
-* Built to interface with FlightBooker Server: [FLightBooker-Server](github.com/AZForest/FlightBookerServer)
+* Built to interface with FlightBooker Server: [FLightBooker-Server](http://github.com/AZForest/FlightBookerServer)
 
