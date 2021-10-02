@@ -30,7 +30,8 @@ View list of booked flights. Clicking on a flight prompts the user if they want 
 
 ### Built with:
 
-* React, with create-react-app
+* React, 
+  * created with [create-react-app](https://github.com/facebook/create-react-app)
 * Redux
 
 ### API Interface
