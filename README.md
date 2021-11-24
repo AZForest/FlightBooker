@@ -36,5 +36,5 @@ View list of booked flights. Clicking on a flight prompts the user if they want 
 
 ### API Interface
 
-* Built to interface with FlightBooker Server: [FLightBooker-Server](http://github.com/AZForest/FlightBookerServer)
+* Built to interface with FlightBooker Server: [FlightBooker-Server](http://github.com/AZForest/FlightBookerServer)
 
