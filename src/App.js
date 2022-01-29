@@ -7,14 +7,8 @@ import * as actionTypes from './store/actions';
 import React from 'react';
 
 class App extends React.Component {
-    
 
-  /* useEffect(() => {
-    dispatch.onInitFlights(flights);
-  }, []); */
     render() {
-      
-
       return (
         <div className="App">
           <TopBar />
@@ -24,8 +18,6 @@ class App extends React.Component {
         </div>
       );
     }
-
-    
 }
 
 const mapStateToProps = state => {

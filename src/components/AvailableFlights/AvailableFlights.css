@@ -7,16 +7,16 @@
 }
 
 .AvFlightsContainer {
-    width: 840px;
+    width: 100%;
     height: 250px;
     margin: auto;
     background-color: #d9d9d9;
-    overflow:scroll;
+    overflow: scroll;
 }
 .category-desc {
     margin: 0px auto 0 auto;
     padding: 10px 0;
-    width: 840px;
+    width: 100%;
     background-color: #aea79f;
     color: white;
     font-weight: bold;
@@ -82,14 +82,16 @@ h3 {
 
 @media (max-width: 500px) {
     .av-f-c {
-        width: 300px;
+        width: 320px;
     }
     .AvFlightsContainer {
-        width: 300px;
+        width: 100%;
         overflow: scroll;
     }
     .category-desc {
-        width: 300px;
+        width: 100%;
         overflow: scroll;
+        padding: 10px 4px;
+        font-size: 12px;
     }
 }
