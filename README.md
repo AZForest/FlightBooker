@@ -30,10 +30,11 @@ View list of booked flights. Clicking on a flight prompts the user if they want 
 
 ### Built with:
 
-* React, with create-react-app
+* React, 
+  * created with [create-react-app](https://github.com/facebook/create-react-app)
 * Redux
 
 ### API Interface
 
-* Built to interface with FlightBooker Server: [FLightBooker-Server](http://github.com/AZForest/FlightBookerServer)
+* Built to interface with FlightBooker Server: [FlightBooker-Server](http://github.com/AZForest/FlightBookerServer)
 
