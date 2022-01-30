@@ -197,6 +197,7 @@
     padding: 0;
 }
 .controls-container {
+    /*background-color: brown;*/
     height: 200px;
     z-index: 100;
     width: 90%;
@@ -219,14 +220,20 @@
 
 @media (max-width: 500px) {
     .SelectFlightContainer {
-        width: 300px;
-        overflow: scroll;
+        width: 350px;
     }
     .fade {
-        width: 300px;
+        width: 350px;
         overflow: scroll;
     }
     .selFlight {
-        width: 820px;
+        font-size: 12px;
     }
+    .selFlight div {
+        margin: 0 10px;
+    }
+    /*.controls-container {
+        display: flex;
+        
+    }*/
 }

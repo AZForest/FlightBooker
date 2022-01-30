@@ -1,9 +1,31 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css";
 
 .av-f-c {
-    position: relative;
+
     width: 840px;
     margin: 0 auto;
+}
+.top-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    padding: 5px 10px;
+    margin: 10px 0px 10px 10px;
+    font-size: 16px;
+    color: black;
+}
+.new-flights-btn {
+    background-color: #f2f2f2;
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    height: 30px;
+    margin: auto 10px;
 }
 
 .AvFlightsContainer {
@@ -49,26 +71,7 @@
 .flights-list {
     overflow: scroll;
 }
-h3 {
-    position: relative;
-    right: 300px;
-    padding: 5px;
-    margin: 10px 0 10px 0;
-    font-size: 16px;
-    color: black;
-}
-.new-flights-btn {
-    position: absolute;
-    top: 2.5px;
-    right: 0;
-    background-color: #f2f2f2;
-    color: black;
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 12px;
-}
+
 .new-flights-btn:hover {
     cursor: pointer;
     background-color: #e95420;
@@ -82,16 +85,16 @@ h3 {
 
 @media (max-width: 500px) {
     .av-f-c {
-        width: 320px;
+        width: 350px;
     }
     .AvFlightsContainer {
         width: 100%;
-        overflow: scroll;
     }
     .category-desc {
-        width: 100%;
-        overflow: scroll;
-        padding: 10px 4px;
-        font-size: 12px;
+        padding: 10px 0px;
+        font-size: 8px;
+    }
+    h3 {
+        font-size: 14px;
     }
 }

@@ -56,8 +56,10 @@ class AvailableFlights extends React.Component {
 
         return (
             <div className="av-f-c">
-                <h3>Available Flights</h3>
-                <button className="new-flights-btn" onClick={() => this.refreshFlights()}>Refresh Flights ⟳</button>
+                <div className="top-div">
+                    <h3>Available Flights</h3>
+                    <button className="new-flights-btn" onClick={() => this.refreshFlights()}>Refresh Flights ⟳</button>
+                </div>
                 <ul className="category-desc">
                         <li>Carrier</li>
                         <li>Depature City</li>
