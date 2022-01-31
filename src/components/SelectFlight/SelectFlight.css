@@ -5,6 +5,7 @@
     position: relative;
     margin: 20px auto;
 }
+
 .SelectedFlight {
     position: absolute;
     top: 0;
@@ -89,7 +90,7 @@
     margin: 0 0 0 20px;
 } */
 .Bookbtn {
-    margin: auto;
+    margin:  0 auto 20px auto;
     font-size: 20px;
     padding: 10px;
     background-color: #17a2b8;
@@ -128,8 +129,12 @@
     display: flex;
     padding: 15px 0;
 }
-.selFlight div {
-    margin: 0px 20px 0 20px;
+.selFlight-info {
+    display: flex;
+    width: 90%;
+}
+.selFlight-info p {
+    margin: auto 5px;
 }
 .selFlight .img1 {
     width: 80px;
@@ -156,57 +161,44 @@
     position: relative;
     font-size: 16px;
 }
-/* .options-price {
-    font-size: 14px;
-    grid-row: 4;
-    grid-column: 1 / 10;
-    background-color: powderblue;
-    display: flex;
 
-} */
-.additional-passengers {
-    grid-row: 4;
-    grid-column: 1 / 2;
-    width: 140px;
-    font-size: 12px;
-    margin-top: 0px;
-}
-.additional-bags {
-    grid-row: 4;
-    grid-column: 2 / 3;
-    width: 140px;
-    font-size: 12px;
-    margin-top: 0px;
-}
-.additional-carry {
-    grid-row: 4;
-    grid-column: 3 / 4;
-    width: 140px;
-    font-size: 12px;
-    margin-top: 0px;
-}
-.class-prices {
-    grid-row: 4;
-    grid-column: 4 / 5;
-    width: 140px;
-    font-size: 12px;
-    margin-top: 0px;
-}
-.class-prices p {
-    margin: 0;
-    padding: 0;
-}
 .controls-container {
-    /*background-color: brown;*/
-    height: 200px;
+    background-color: transparent;
+    /*height: 200px;*/
     z-index: 100;
     width: 90%;
     margin: 20px auto 10px auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 25px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+.c-control {
+    background-color: transparent;
+    margin: 10px auto;
+}
+.c-control-label {
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+}
+.c-control-info {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.flightValue {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+.class-prices p {
+    margin: 0px;
+}
+.priceValue {
+    color: #17a2b8;
+    font-size: 20px;
+}
+
+
 .fade {
     opacity: 1;
     animation: fade-in;
@@ -232,8 +224,8 @@
     .selFlight div {
         margin: 0 10px;
     }
-    /*.controls-container {
-        display: flex;
-        
-    }*/
+    .X {
+        font-size: 12px;
+        right: 5px;
+    }
 }

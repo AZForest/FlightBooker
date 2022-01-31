@@ -67,12 +67,14 @@ class SelectFlight extends React.Component {
     let selFlight = <div className="selFlight"></div>;
     if (this.props.sFlight !== null) {
         selFlight = <div className="selFlight">
-                        <div>{this.props.sFlight.carrier}</div>
-                        <div style={{textTransform: "uppercase"}}>{this.props.sFlight.dCity}</div>
-                        <div>to</div>
-                        <div style={{textTransform: "uppercase"}}>{this.props.sFlight.aCity}</div>
-                        <div>{this.props.sFlight.date}</div>
-                        <div>${this.props.sFlight.price}</div>
+                        <div className="selFlight-info">
+                            <p>{this.props.sFlight.carrier}</p>
+                            <p style={{textTransform: "uppercase"}}>{this.props.sFlight.dCity}</p>
+                            <p>to</p>
+                            <p style={{textTransform: "uppercase"}}>{this.props.sFlight.aCity}</p>
+                            <p>{this.props.sFlight.date}</p>
+                            <p>${this.props.sFlight.price}</p>
+                        </div>
                         <div className="X" onClick={() => this.props.onRemoveFlight()}>X</div>
                     </div>;
     }
@@ -95,7 +97,7 @@ class SelectFlight extends React.Component {
     }
 
     let flightSelectDisplay = 
-        <div className="selFlight">
+        <div className="selFlight" style={{height: "20px"}}>
             <h1 className="please-select-flight">Please Select Flight</h1>
             <img src={blackPlane} alt="pic" className="img1"></img>    
         </div>;
@@ -110,7 +112,54 @@ class SelectFlight extends React.Component {
             <div className="fade">
                 {selFlight}
                 <div className="controls-container">
-                    <div className="passenger-label">Passengers</div>
+                    <div className="c-control">
+                        <p className="c-control-label">Passengers</p>
+                        <div className="flightValue">{this.props.sFlight ? this.props.options.passengers : ""}</div>
+                        <div className="btns-container1 btns-container">
+                            <button className="increment-btn" onClick={() => this.props.onPassengerIncrement()} disabled={this.props.sFlight === null || this.props.options.passengers < 1 ? true : false}>+</button>
+                            <button className="decrement-btn" onClick={() => this.props.onPassengerDecrement()} disabled={this.props.sFlight === null || this.props.options.passengers <= 1 ? true : false}>-</button>
+                        </div>
+                        <p className="c-control-info">Additional<br /> Passengers:<br />Ticket Price x2</p>
+                    </div>
+                    <div className="c-control">
+                        <p className="c-control-label">Bags</p>
+                        <div className="flightValue">{this.props.sFlight ? this.props.options.bags : ""}</div>
+                        <div className="btns-container2 btns-container">
+                            <button className="increment-btn" onClick={() => this.props.onBagIncrement()} disabled={this.props.sFlight === null ? true : false}>+</button>
+                            <button className="decrement-btn" onClick={() => this.props.onBagDecrement()} disabled={this.props.sFlight === null || this.props.options.bags === 0 ? true : false}>-</button>
+                        </div>
+                        <p className="c-control-info">50$/each</p>
+                    </div>
+                    <div className="c-control">
+                        <p className="c-control-label">Carry-Ons</p>
+                        <div className="flightValue">{this.props.sFlight ? this.props.options.carryOn : ""}</div>
+                        <div className="btns-container3 btns-container">
+                            <button className="increment-btn" onClick={() => this.props.onCarryOnIncrement()} disabled={this.props.sFlight === null ? true : false}>+</button>
+                            <button className="decrement-btn" onClick={() => this.props.onCarryOnDecrement()} disabled={this.props.sFlight === null || this.props.options.carryOn === 0 ? true : false}>-</button>
+                        </div>
+                        <p className="c-control-info">30$/each</p>
+                    </div>
+                    <div className="c-control">
+                        <p className="c-control-label">Class</p>
+                        <div className="flightValue">{this.props.sFlight ? this.props.options.class : ""}</div>
+                        <div className="btns-container btns-container4">
+                            <select onChange={this.onChangeHandler}>
+                                <option value="Coach">Coach</option>
+                                <option value="Second">Second Class</option>
+                                <option value="First">First Class</option>
+                            </select>
+                        </div>
+                        <div className="c-control-info class-prices">
+                            <p>Coach: Free</p>
+                            <p>Second Class: $100</p>
+                            <p>First Class: $200</p>
+                        </div>
+                    </div>
+                    <div className="c-control">
+                        <p className="c-control-label">Price</p>
+                        <div className="flightValue priceValue">{this.props.sFlight ? "$" + this.props.totalPrice : ""}</div>
+                    </div>
+                    {/*<div className="passenger-label">Passengers</div>
                     <div className="bag-label">Bags</div>
                     <div className="carry-label">Carry-Ons</div>
                     <div className="class-label">Class</div>
@@ -145,7 +194,7 @@ class SelectFlight extends React.Component {
                             <p>Coach: Free</p>
                             <p>Second Class: $100</p>
                             <p>First Class: $200</p>
-                        </div>
+                    </div>*/}
                 </div>
                     <button className="Bookbtn" onClick={() => this.setModalVisible()}>Book</button>
             </div>
@@ -155,7 +204,7 @@ class SelectFlight extends React.Component {
 
     return (
         
-        <div className="SelectFlightContainer">
+        <div className="SelectFlightContainer" style={this.props.sFlight ? {height: "auto"} : {height: "350px"}}>
             {flightSelectDisplay}
         </div>
     )
