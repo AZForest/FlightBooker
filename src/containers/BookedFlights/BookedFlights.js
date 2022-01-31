@@ -89,12 +89,11 @@ class BookedFlights extends React.Component {
             })
         }
 
-
         return (
-            <div className="BookedFlights" >
+            <div className="BookedFlights">
                 {modal}
-                <h2>Booked Flights</h2>
-                <div className="bookedflights-list">
+                <h1>Booked Flights</h1>
+                {/*<div className="bookedflights-list">
                     <ul>
                         <li>Carrier</li>
                         <li>Departure</li>
@@ -106,8 +105,9 @@ class BookedFlights extends React.Component {
                         <li>Price</li>
                     </ul>
                     <br />
-                    {renderedFlights}
-                </div>
+                    renderedFlights
+                </div>*/}
+                <div style={{paddingTop: "55px", paddingBottom: "10px"}}>{renderedFlights}</div>
             </div>
         )
     }

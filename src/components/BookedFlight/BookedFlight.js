@@ -5,14 +5,14 @@ const bookedFlight = (props) => {
     return (
         <React.Fragment>
             <div className="BookedFlight" onClick={props.click}>
-                <p>{props.carrier}</p>
-                <p>{props.dCity}</p>
-                <p>{props.aCity}</p>
-                <p>{props.date}</p>
-                <p>{props.passengers}</p>
-                <p>{props.bags}</p>
-                <p>{props.carryOn}</p>
-                <p>${props.totalPrice}</p>
+                <p className='BookedFlight-carrier'>{props.carrier}</p>
+                <p>Departure: {props.dCity}</p>
+                <p>Arrival: {props.aCity}</p>
+                <p>Date: {props.date}</p>
+                <p>Passengers: {props.passengers}</p>
+                <p>Bags: {props.bags}</p>
+                <p>Carry-Ons: {props.carryOn}</p>
+                <p>Price: ${props.totalPrice}</p>
                 <div className="bFlight-X">x</div>
             </div>
             
