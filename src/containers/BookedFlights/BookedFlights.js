@@ -93,20 +93,6 @@ class BookedFlights extends React.Component {
             <div className="BookedFlights">
                 {modal}
                 <h1>Booked Flights</h1>
-                {/*<div className="bookedflights-list">
-                    <ul>
-                        <li>Carrier</li>
-                        <li>Departure</li>
-                        <li>Arrival</li>
-                        <li>Date</li>
-                        <li>Passengers</li>
-                        <li>Bags</li>
-                        <li>Carry-Ons</li>
-                        <li>Price</li>
-                    </ul>
-                    <br />
-                    renderedFlights
-                </div>*/}
                 <div style={{paddingTop: "55px", paddingBottom: "10px"}}>{renderedFlights}</div>
             </div>
         )
